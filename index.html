@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://images.rede.natura.net/html/conferir-skus/bootstrap.css">
+    <title>Atualizar Posição</title>
+    <style type="text/css">
+        .posicoes_info-ultimaposicao {
+            width: 100%;
+        }
+
+        .posicoes_info-ultimaposicao table {
+            width: 100%;
+            table-layout: fixed;
+        }
+
+        .posicoes_info-ultimaposicao th,
+        .posicoes_info-ultimaposicao td {
+            width: 20%;
+            padding: 10px;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .posicoes_info-ultimaposicao table thead {
+            justify-content: space-around;
+            background-color: lightgray;
+        }
+
+        .posicoes_info-ultimaposicao table tbody tr:nth-child(odd) {
+            background-color: #f2f2f2;
+        }
+
+        .posicoes_info-ultimaposicao table tbody tr:hover {
+            background-color: #eaeaea;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Posições das Seções:</h1>
+        <section class="posicoes_info-ultimaposicao">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Seção</th>
+                        <th>Última Posição APP</th>
+                        <th>Último Posicionamento</th>
+                        <th>Gerar Posição</th>
+                        <th>Últimos Gerados</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="secao-1">
+                        <td>237036</td>
+                        <td>São João</td>
+                        <td>17</td>
+                        <td><span id="posicao-1">70</span></td>
+                        <td><button onclick="gerarPosicoesPopup(1)">Gerar</button></td>
+                        <td><span id="ultimas-posicoes-1"></span></td>
+                    </tr>
+                    <tr id="secao-2">
+                        <td>28396</td>
+                        <td>Presentes que depois vai virar Dia dos Pais</td>
+                        <td>18</td>
+                        <td><span id="posicao-2">44880</span></td>
+                        <td><button onclick="gerarPosicoesPopup(2)">Gerar</button></td>
+                        <td><span id="ultimas-posicoes-2"></span></td>
+
+                    </tr>
+                    <tr id="secao-3">
+                        <td>220751</td>
+                        <td>Lumina</td>
+                        <td>19</td>
+                        <td><span id="posicao-3">56845</span></td>
+                        <td><button onclick="gerarPosicoesPopup(3)">Gerar</button></td>
+                        <td><span id="ultimas-posicoes-3"></span></td>
+
+                    </tr>
+                    <tr id="secao-4">
+                        <td>47661</td>
+                        <td>Espaço Digital</td>
+                        <td>20</td>
+                        <td><span id="posicao-4">2735</span></td>
+                        <td><button onclick="gerarPosicoesPopup(4)">Gerar</button></td>
+                        <td><span id="ultimas-posicoes-4"></span></td>
+
+                    </tr>
+                    <tr id="secao-5">
+                        <td>167931</td>
+                        <td>Oportunidades Revista Interactiva</td>
+                        <td>22</td>
+                        <td><span id="posicao-5">460</span></td>
+                        <td><button onclick="gerarPosicoesPopup(5)">Gerar</button></td>
+                        <td><span id="ultimas-posicoes-5"></span></td>
+
+                    </tr>
+                    <tr id="secao-6">
+                        <td>1822</td>
+                        <td>Ofertas</td>
+                        <td>21</td>
+                        <td><span id="posicao-6">56985</span></td>
+                        <td><button onclick="gerarPosicoesPopup(6)">Gerar</button></td>
+                        <td><span id="ultimas-posicoes-6"></span></td>
+
+                    </tr>
+                    <tr id="secao-7">
+                        <td>1877</td>
+                        <td>Vídeos</td>
+                        <td>23</td>
+                        <td><span id="posicao-7">2670</span></td>
+                        <td><button onclick="gerarPosicoesPopup(7)">Gerar</button></td>
+                        <td><span id="ultimas-posicoes-7"></span></td>
+
+                    </tr>
+                    <tr id="secao-8">
+                        <td>1737</td>
+                        <td>Destaques</td>
+                        <td>24</td>
+                        <td><span id="posicao-8">11610</span></td>
+                        <td><button onclick="gerarPosicoesPopup(8)">Gerar</button></td>
+                        <td><span id="ultimas-posicoes-8"></span></td>
+
+                    </tr>
+                    <tr id="secao-9">
+                        <td>6361</td>
+                        <td>Relacionamento com o Cliente</td>
+                        <td>25</td>
+                        <td><span id="posicao-9">56415</span></td>
+                        <td><button onclick="gerarPosicoesPopup(9)">Gerar</button></td>
+                        <td><span id="ultimas-posicoes-9"></span></td>
+
+                    </tr>
+                    <tr id="secao-10">
+                        <td>99226</td>
+                        <td>Status Stories</td>
+                        <td>26</td>
+                        <td><span id="posicao-10">6520</span></td>
+                        <td><button onclick="gerarPosicoesPopup(10)">Gerar</button></td>
+                        <td><span id="ultimas-posicoes-10"></span></td>
+
+                    </tr>
+                    <tr id="secao-11">
+                        <td>1879</td>
+                        <td>Por um mundo mais bonito</td>
+                        <td>27</td>
+                        <td><span id="posicao-11">990</span></td>
+                        <td><button onclick="gerarPosicoesPopup(11)">Gerar</button></td>
+                        <td><span id="ultimas-posicoes-11"></span></td>
+
+                    </tr>
+                    <tr id="secao-12">
+                        <td>1740</td>
+                        <td>Imagens para Editar</td>
+                        <td>28</td>
+                        <td><span id="posicao-12">2055</span></td>
+                        <td><button onclick="gerarPosicoesPopup(12)">Gerar</button></td>
+                        <td><span id="ultimas-posicoes-12"></span></td>
+
+                    </tr>
+                    <tr id="secao-13">
+                        <td>Stickers</td>
+                        <td>Stickers</td>
+                        <td>Stickers</td>
+                        <td><span id="posicao-13">33935</span></td>
+                        <td><button onclick="gerarPosicoesPopup(13)">Gerar</button></td>
+                        <td><span id="ultimas-posicoes-13"></span></td>
+
+                    </tr>
+                    <tr id="secao-14">
+                        <td>Stickers</td>
+                        <td>Stickers</td>
+                        <td>Stickers</td>
+                        <td><span id="posicao-14">33935</span></td>
+                        <td><button onclick="gerarPosicoesPopup(14)">Gerar</button></td>
+                        <td><span id="ultimas-posicoes-14"></span></td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script>
+       function gerarPosicoesPopup(secaoId) {
+            const spanId = `posicao-${secaoId}`;
+            const spanElement = document.getElementById(spanId);
+            const currentPosition = parseInt(spanElement.textContent);
+
+            // Abre o popup com o campo de entrada
+            const quantidade = prompt("Informe a quantidade de vezes:", "");
+            if (quantidade !== null && quantidade !== "") {
+                const quantidadeVezes = parseInt(quantidade);
+                const novaPosicao = currentPosition + quantidadeVezes * 5;
+                spanElement.textContent = novaPosicao;
+
+                // Armazena o valor atualizado no localStorage
+                localStorage.setItem(spanId, novaPosicao);
+
+                const ultimasPosicoesSpanId = `ultimas-posicoes-${secaoId}`;
+                const ultimasPosicoesSpanElement = document.getElementById(ultimasPosicoesSpanId);
+
+                if (quantidadeVezes > 1) {
+                    let ultimasPosicoes = "";
+
+                    for (let i = 0; i < quantidadeVezes; i++) {
+                        const posicaoGerada = novaPosicao - (quantidadeVezes - 1 - i) * 5;
+                        ultimasPosicoes += posicaoGerada;
+
+                        if (i !== quantidadeVezes - 1) {
+                            ultimasPosicoes += ", ";
+                        }
+                    }
+
+                    ultimasPosicoesSpanElement.textContent = ultimasPosicoes;
+                } else {
+                    ultimasPosicoesSpanElement.textContent = "";
+                }
+            }
+        }
+
+
+        // Restaura os valores das posições a partir do localStorage
+        window.addEventListener('DOMContentLoaded', () => {
+            for (let secaoId = 1; secaoId <= 14; secaoId++) {
+                const spanId = `posicao-${secaoId}`;
+                const spanElement = document.getElementById(spanId);
+                const savedPosition = localStorage.getItem(spanId);
+                if (savedPosition !== null) {
+                    spanElement.textContent = savedPosition;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
