@@ -170,16 +170,7 @@
                         <td><span id="ultimas-posicoes-13"></span></td>
 
                     </tr>
-                    <tr id="secao-14">
-                        <td>Stickers</td>
-                        <td>Stickers</td>
-                        <td>Stickers</td>
-                        <td><span id="posicao-14">33935</span></td>
-                        <td><button onclick="gerarPosicoesPopup(14)">Gerar</button></td>
-                        <td><span id="ultimas-posicoes-14"></span></td>
-
-                    </tr>
-                </tbody>
+            </tbody>
             </table>
         </section>
     </div>
@@ -225,7 +216,7 @@
 
         // Restaura os valores das posições a partir do localStorage
         window.addEventListener('DOMContentLoaded', () => {
-            for (let secaoId = 1; secaoId <= 14; secaoId++) {
+            for (let secaoId = 1; secaoId <= 13; secaoId++) {
                 const spanId = `posicao-${secaoId}`;
                 const spanElement = document.getElementById(spanId);
                 const savedPosition = localStorage.getItem(spanId);
